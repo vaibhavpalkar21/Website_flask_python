@@ -4,9 +4,16 @@ from flask import Flask, render_template, request
 # create simple flask application
 app = Flask(__name__)
 
+# @app.route("/", methods = ["GET"])
+# def welcome():
+#     return "<h1>Marks Calculator <br> <br> Click to continue</h1>"
+
 @app.route("/", methods = ["GET"])
-def welcome():
-    return "<h1>welcome to the channel</h1>"
+def home():
+        if request.method=="GET":
+            return render_template('home.html')
+        # else:
+        #     return render_template('form.html')
 
 @app.route("/index", methods = ["GET"])
 def index():
