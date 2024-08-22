@@ -15,11 +15,11 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('form')}}" method="post">
-    	<input type="text" name="maths" placeholder="Maths" required="required" />
-        <input type="text" name="science" placeholder="Science" required="required" />
-		<input type="text" name="history" placeholder="History" required="required" />
+    	<input type="text" name="maths" placeholder="Maths" required="required" size="20"/>
+        <input type="text" name="science" placeholder="Science" required="required" size="20" />
+		<input type="text" name="history" placeholder="History" required="required" size="20"/>
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Calculate Button</button>
+        <button type="submit" class="btn btn-primary btn-block btn-large" >Calculate Button</button>
     </form>
 
    <br>
@@ -27,6 +27,12 @@
    <br>
    This student has got {{grade_cat}} Grade
    <br>
+   <br>
+   <h2> </h2><!-- you can try any name here between h & alsocan remove this h-->
+   <!-- <form action="{{ url_for('home')}}" method="post"></form> -->
+   <form action="{{ url_for('home')}}">
+        <button type="submit" class="btn Button" >Return to Home</button>
+   </form>
    <!-- <h2>caluclate home</h2>
    <form action="{{ url_for('form')}}" method="post">
         <button type="submit" class="btn Button" >home button</button>
